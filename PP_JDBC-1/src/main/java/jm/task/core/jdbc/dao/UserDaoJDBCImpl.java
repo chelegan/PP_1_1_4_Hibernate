@@ -15,7 +15,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     @Override
     public void createUsersTable() {
-
+        /*
         String sql = "CREATE TABLE IF NOT EXISTS Users " +
                 "(Id BIGINT PRIMARY KEY AUTO_INCREMENT, " +
                 "Name VARCHAR(20), " +
@@ -31,12 +31,15 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
 
             throw new RuntimeException(e);
+
         }
+
+         */
     }
 
     @Override
     public void dropUsersTable() {
-
+        /*
         String sql = "DROP TABLE IF EXISTS Users";
 
         try (Connection connection = Util.getConnection();
@@ -49,10 +52,12 @@ public class UserDaoJDBCImpl implements UserDao {
             throw new RuntimeException(e);
         }
 
+         */
     }
 
     @Override
     public void saveUser(String name, String lastName, byte age) {
+        /*
 
         String sql = "INSERT INTO Users(Name, LastName, Age) VALUES (?, ?, ?)";
 
@@ -71,10 +76,12 @@ public class UserDaoJDBCImpl implements UserDao {
             throw new RuntimeException(e);
         }
 
+         */
     }
 
     @Override
     public void removeUserById(long id) {
+        /*
 
         String sql = "DELETE FROM Users WHERE Id = ?";
 
@@ -89,11 +96,13 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+         */
     }
 
     @Override
     public List<User> getAllUsers() {
-
+        /*
         List <User> users = new ArrayList<>();
         String sql = "SELECT * FROM Users";
 
@@ -117,11 +126,13 @@ public class UserDaoJDBCImpl implements UserDao {
 
         return users;
 
+         */
+        return null;
     }
 
     @Override
     public void cleanUsersTable() {
-
+        /*
         String sql = "TRUNCATE TABLE Users";
 
         try (Connection connection = Util.getConnection();
@@ -133,5 +144,7 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+         */
     }
 }
